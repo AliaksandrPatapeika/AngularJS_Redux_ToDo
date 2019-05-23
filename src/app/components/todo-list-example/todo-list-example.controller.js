@@ -8,10 +8,11 @@ export default class ExampleListController {
     this.$ngRedux = $ngRedux;
 
     /* subscribe to redux */
-    this.unsubscribe = this.$ngRedux.connect(this.onStateChange, actions)(this);
+    this.unsubscribe = this.$ngRedux.connect(this.mapStateToThis, actions)(this);
   }
 
-  onStateChange(state) {
+// Which part of the Redux global state does our component want to receive?
+  mapStateToThis(state) {
     return {
       todosFromState: state.todosExample,
     };

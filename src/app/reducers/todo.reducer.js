@@ -1,4 +1,4 @@
-import constants from '../app.constants';
+// import constants from '../app.constants';
 
 const initialState = {
   todos: [
@@ -30,34 +30,34 @@ const initialState = {
 export default function (state = initialState, action) {
   switch (action.type) {
 
-    case constants.ADD_TASK: {
-      // TODO
-      return [...state, action.payload];
-    }
-
-    case constants.UPDATE_TASK: {
-      // TODO
-      const { id } = action.payload;
-      return state.map(item => {
-        if (item.id === id) {
-          return {
-            ...item,
-            ...action.payload,
-          };
-        }
-        return item;
-      });
-    }
-
-    case constants.DELETE_TASK: {
-      // TODO
-      const { id } = action.payload;
-      return state.filter(item => item.id !== id);
-      // return [
-      //   ...state.slice(0, action.payload),
-      //   ...state.slice(action.payload + 1)
-      // ]
-    }
+    // case constants.ADD_TASK: {
+    //   // TODO
+    //   return [...state, action.payload];
+    // }
+    //
+    // case constants.UPDATE_TASK: {
+    //   // TODO
+    //   const { id } = action.payload;
+    //   return state.map(item => {
+    //     if (item.id === id) {
+    //       return {
+    //         ...item,
+    //         ...action.payload,
+    //       };
+    //     }
+    //     return item;
+    //   });
+    // }
+    //
+    // case constants.DELETE_TASK: {
+    //   // TODO
+    //   const { id } = action.payload;
+    //   return state.filter(item => item.id !== id);
+    //   // return [
+    //   //   ...state.slice(0, action.payload),
+    //   //   ...state.slice(action.payload + 1)
+    //   // ]
+    // }
 
     default:
       return state;
