@@ -31,9 +31,35 @@ function deleteTodo(todo) {
   };
 }
 
+// для моего приложения
+function addTask(task) {
+  return {
+    type: constants.ADD_TASK,
+    payload: task,
+  };
+}
+
+function updateTask(task) {
+  return {
+    type: constants.UPDATE_TASK,
+    payload: task,
+  };
+}
+
+function deleteTask(task) {
+  return {
+    type: constants.DELETE_TASK,
+    payload: task,
+  };
+}
+
 export default {
   updateExampleData,
   createTodo,
   updateTodo,
   deleteTodo,
+  // my actions
+  addTask,
+  updateTask,
+  deleteTask,
 };

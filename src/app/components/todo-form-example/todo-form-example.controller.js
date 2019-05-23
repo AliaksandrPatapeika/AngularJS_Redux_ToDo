@@ -5,11 +5,11 @@ const cleanForm = {
   creator: '',
 };
 
-export default class FormController {
+export default class ExampleFormController {
   constructor($ngRedux) {
     'ngInject';
 
-    console.log('вошли в FormController');
+    console.log('вошли в ExampleFormController');
 
     /* bind dependencies */
     this.$ngRedux = $ngRedux;

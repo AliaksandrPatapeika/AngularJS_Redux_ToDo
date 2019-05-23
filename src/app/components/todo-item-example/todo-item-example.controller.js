@@ -1,7 +1,7 @@
-export default class ItemController {
+export default class ExampleItemController {
 
   $onInit() {
-    console.log('вошли в ItemController');
+    console.log('вошли в ExampleItemController');
     this.editMode = false;
   }
 

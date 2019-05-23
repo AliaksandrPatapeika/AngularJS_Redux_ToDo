@@ -1,0 +1,37 @@
+<div class="container">
+	MY TODO LIST
+	<loading loading="$ctrl.loading"></loading>
+	<error-container
+		ng-if="$ctrl.error"
+		error="$ctrl.error">
+	</error-container>
+	<div class="todo-list"
+			 ng-if="!$ctrl.error">
+		<head-container
+			ng-if="$ctrl.tasks"
+			tasks="$ctrl.tasks"
+			error="$ctrl.error">
+		</head-container>
+		<search
+			ng-if="$ctrl.tasks.length"
+			search-task="$ctrl.searchTask">
+		</search>
+		<filter-buttons-group
+			ng-if="$ctrl.tasks.length"
+			filter-name="$ctrl.filterName">
+		</filter-buttons-group>
+		<task-item-list
+			ng-if="$ctrl.tasks.length"
+			tasks="$ctrl.tasks"
+			search-task="$ctrl.searchTask"
+			filter-name="$ctrl.filterName">
+		</task-item-list>
+		<add-task
+			ng-if="$ctrl.tasks"
+			tasks="$ctrl.tasks"
+			error="$ctrl.error">
+		</add-task>
+	</div>
+</div>
+
+<hr><hr>

@@ -1,10 +1,11 @@
 import controller from './todo-list.controller';
-import template from './todo-list.component.html';
+import template from './todo-list.template.html';
+import './todoList.css';
 
-console.log('вошли в todo-list.component');
 const todoList = {
   template,
   controller,
+  bindings: {},
 };
 
 export default todoList;

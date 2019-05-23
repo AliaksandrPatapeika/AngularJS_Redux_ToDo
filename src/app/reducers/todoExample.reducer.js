@@ -16,7 +16,7 @@ const initialState = [
 export default function (state = initialState, action) {
   switch (action.type) {
 
-    case constants.TODO_ADD: {
+    case constants.TODO_ADD_EXAMPLE: {
       const id = Date.now();
       const todoItem = {
         id,
@@ -26,7 +26,7 @@ export default function (state = initialState, action) {
       // return [...state, action.payload];
     }
 
-    case constants.TODO_DELETE: {
+    case constants.TODO_DELETE_EXAMPLE: {
       const { id } = action.payload;
       return state.filter(item => item.id !== id);
       // return [
@@ -35,7 +35,7 @@ export default function (state = initialState, action) {
       // ]
     }
 
-    case constants.TODO_UPDATE: {
+    case constants.TODO_UPDATE_EXAMPLE: {
       const { id } = action.payload;
       return state.map(item => {
         if (item.id === id) {
