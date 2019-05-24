@@ -2,7 +2,7 @@ import constants from '../app.constants';
 
 // для первого приложения
 function updateExampleData(data) {
-  console.log('Вызвали updateExampleData');
+  // console.log('Вызвали updateExampleData');
   return {
     type: constants.UPDATE_EXAMPLE_TEXT,
     payload: data,
@@ -45,13 +45,13 @@ function deleteTodo(todo) {
 //     payload: task,
 //   };
 // }
-//
-// function deleteTask(task) {
-//   return {
-//     type: constants.DELETE_TASK,
-//     payload: task,
-//   };
-// }
+
+function deleteTask(taskId) {
+  return {
+    type: constants.DELETE_TASK,
+    payload: taskId,
+  };
+}
 
 export default {
   updateExampleData,
@@ -61,5 +61,5 @@ export default {
   // my actions
   // addTask,
   // updateTask,
-  // deleteTask,
+  deleteTask,
 };

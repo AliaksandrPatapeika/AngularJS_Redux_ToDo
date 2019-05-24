@@ -21,7 +21,7 @@ export default class ExampleComponentController {
    */
 // Which part of the Redux global state does our component want to receive?
   mapStateToThis(state) {
-    console.log('ВЫЗВАЛИ onStateChange');
+    // console.log('ВЫЗВАЛИ onStateChange');
     /* return will bind to controller context (this), exposed to view via $ctrl */
     return {
       textFromState: state.example.text,

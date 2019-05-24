@@ -1,4 +1,4 @@
-// import constants from '../app.constants';
+import constants from '../app.constants';
 
 const initialState = {
   todos: [
@@ -48,16 +48,14 @@ export default function (state = initialState, action) {
     //     return item;
     //   });
     // }
-    //
-    // case constants.DELETE_TASK: {
-    //   // TODO
-    //   const { id } = action.payload;
-    //   return state.filter(item => item.id !== id);
-    //   // return [
-    //   //   ...state.slice(0, action.payload),
-    //   //   ...state.slice(action.payload + 1)
-    //   // ]
-    // }
+
+    case constants.DELETE_TASK: {
+      // TODO
+      return {
+        ...state,
+        todos: state.todos.filter(item => item.id !== action.payload),
+      };
+    }
 
     default:
       return state;

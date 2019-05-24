@@ -1,0 +1,24 @@
+<div class="task-list-item-container">
+	<li class="task-list-item"
+			ng-repeat="task in $ctrl.todos">
+		<div class="task-list-item-label">
+			<label>
+				<input type="checkbox" title="Complete task">
+			</label>
+			<span ng-class="{done: task.done, important: task.important}">
+				{{task.text}}
+			</span>
+		</div>
+		<div class="task-list-item-buttons-group">
+			<button class="btn btn-info" type="button" title="Task details">
+				<i class="fas fa-info"></i>
+			</button>
+			<button class="btn btn-important" type="button" title="Important task">
+				<i class="fas fa-exclamation"></i>
+			</button>
+			<button class="btn btn-delete" type="button" title="Delete task" ng-click="$ctrl.deleteTask(task.id)">
+				<i class="fas fa-trash-alt"></i>
+			</button>
+		</div>
+	</li>
+</div>

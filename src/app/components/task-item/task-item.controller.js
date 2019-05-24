@@ -1,6 +1,6 @@
-// import actions from '../../actions/actions';
+import actions from '../../actions/actions';
 
-export default class todoListController {
+export default class taskItemController {
   constructor($ngRedux) {
     'ngInject';
 
@@ -8,15 +8,14 @@ export default class todoListController {
     this.$ngRedux = $ngRedux;
 
     /* subscribe to redux */
-    // this.unsubscribe = this.$ngRedux.connect(this.mapStateToThis, actions)(this);
-    this.unsubscribe = this.$ngRedux.connect(this.mapStateToThis)(this);
+    this.unsubscribe = this.$ngRedux.connect(this.mapStateToThis, actions)(this);
 
     /* set properties */
     // this.remainingTasks = this.todos.filter(task => !task.done).length;
     // this.doneTasks = this.todos.length - this.remainingTasks;
   }
 
-  // Which part of the Redux global state does our component want to receive?
+// Which part of the Redux global state does our component want to receive?
   mapStateToThis(state) {
     /* return will bind to controller context (this), exposed to view via $ctrl */
     return {

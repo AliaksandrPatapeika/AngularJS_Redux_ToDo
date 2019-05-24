@@ -1,24 +1,23 @@
-describe('Example Service', function() {
-
+describe('Example Service', () => {
   beforeEach(angular.mock.module('app'));
 
-  beforeEach(inject(function(_exampleService_) {
+  beforeEach(inject(_exampleService_ => {
     exampleService = _exampleService_;
   }));
 
-  it('should exist', function() {
+  it('should exist', () => {
     expect(exampleService).toBeDefined();
   });
 
-  it('should expose getName()', function() {
+  it('should expose getName()', () => {
     expect(exampleService.getName).toBeDefined();
   });
 
-  it('getName() should return a name string', function() {
+  it('getName() should return a name string', () => {
     expect(exampleService.getName()).toEqual('ExampleServiceTest');
   });
 
-  it('items in constructor should be exposed', function() {
+  it('items in constructor should be exposed', () => {
     expect(exampleService.name).toEqual('ExampleServiceTest');
   });
 });
